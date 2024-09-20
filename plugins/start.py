@@ -105,11 +105,20 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
-                ]
+    
+    [
+                    InlineKeyboardButton("⚡️ ᴀʙᴏᴜᴛ", callback_data = "about"),
+                    InlineKeyboardButton('🍁 MAIN CHANNEL', url='https://t.me/anime_sub_society')
+        
             ]
+                reply_markup = InlineKeyboardMarkup(
+            [
+    
+    [
+                    InlineKeyboardButton("⚡️ ᴏɴɢᴏɪɴɢ sᴏᴄɪᴇᴛʏ", url='https://t.me/ongoing_society'),
+                    InlineKeyboardButton('🍁 ʙᴏᴛ sᴏᴄɪᴇᴛʏ', url='https://t.me/about_society')
+        
+    ]
         )
         await message.reply_text(
             text = START_MSG.format(
